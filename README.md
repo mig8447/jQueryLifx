@@ -1,5 +1,5 @@
 # jQueryLifx
-A jQuery Library wrapping the LIFX REST API. Most of the JS projects I found wrapping the LIFX REST API were NodeJS libraries, which required several dependencies to work in the browser and I needed something quick, so I thought of the ajax functionality in jQuery and _voilà_. 
+A jQuery Library wrapping the LIFX REST API 💡. Most of the JS projects I found wrapping the LIFX REST API were NodeJS libraries, which required several dependencies to work in the browser and I needed something quick, so I thought of the ajax functionality in jQuery and _voilà_. 
 
 ## Installation
 
