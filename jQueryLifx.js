@@ -9,6 +9,7 @@ var jQueryLifx = function( token, fast/*, protectRateLimit*/ ){
         this._baseApiUrl = 'https://api.lifx.com/v1/';
     }
 };
+jQueryLifx.version = '1.0.0';
 jQueryLifx.prototype._getLifxRateLimit = function( jqXHR ){
     var result = {};
     
@@ -47,7 +48,7 @@ jQueryLifx.prototype._makeRequest = function( settings, callback ){
     }).fail(function( jqXHR, textStatus, errorThrown ){
         callback( jqXHR.responseJSON || jqXHR.responseText || undefined, textStatus, jqXHR, errorThrown );
     });
-}
+};
 jQueryLifx.prototype.listLights = function( selector, callback ){
     selector = selector || 'all';
     
@@ -58,7 +59,7 @@ jQueryLifx.prototype.listLights = function( selector, callback ){
             "Authorization": "Bearer " + this.token
         }
     }, callback );
-}
+};
 jQueryLifx.prototype.setState = function( selector, state, callback ){
     selector = selector || 'all';
     
@@ -72,7 +73,7 @@ jQueryLifx.prototype.setState = function( selector, state, callback ){
         },
         data: jQuery.extend({ fast: that.fast }, state)
     }, callback );
-}
+};
 jQueryLifx.prototype.togglePower = function( selector, duration, callback ){
     selector = selector || 'all';
     duration = duration || 1;
@@ -87,4 +88,4 @@ jQueryLifx.prototype.togglePower = function( selector, duration, callback ){
             duration: duration
         }
     }, callback );
-}
+};
